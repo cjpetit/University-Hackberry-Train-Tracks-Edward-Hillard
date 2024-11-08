@@ -1,0 +1,2241 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Grass.proto"
+EXTERNPROTO "../protos/Building.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Pavement.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/Road.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/RoadLine.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/RoadIntersection.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/AddLanesRoadSegment.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Asphalt.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/traffic/protos/ParkingLines.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/SandyGround.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/ScuffedPlastic.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Plaster.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/geometries/protos/Rectangle.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/GlossyPaint.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/traffic/protos/CrossRoadsTrafficLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/traffic/protos/StopSign.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/robotis/turtlebot/protos/TurtleBot3Burger.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/devices/robotis/protos/RobotisLds01.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/CementTiles.proto"
+
+WorldInfo {
+  info [
+    "RoCKIn@Home"
+  ]
+  title "RoCKIn@Home"
+  basicTimeStep 20
+  optimalThreadCount 8
+  lineScale 1
+}
+Viewpoint {
+  fieldOfView 0.785
+  orientation -0.2177306445993989 0.0058923267172858946 0.9759911100456742 3.0887922931325282
+  position 1506.3818014511196 209.8175858575838 538.052331448897
+  exposure 0.75
+  follow "TurtleBot3Burger:LDS-01"
+}
+TexturedBackgroundLight {
+}
+TexturedBackground {
+}
+DEF GROUND Solid {
+  translation 0 0 -0.6
+  children [
+    Shape {
+      appearance Grass {
+      }
+      geometry IndexedFaceSet {
+        coord DEF GROUND_COORDINATES Coordinate {
+          point [
+            0 0 0
+            790 0 0
+            710 1170 0
+            230 1170 0
+          ]
+        }
+        coordIndex [
+          0, 1, 2, 3
+        ]
+      }
+    }
+  ]
+  name "solid(1)"
+  boundingObject Pose {
+    translation 395 585 .6
+    children [
+      Plane {
+        size 790 1170
+      }
+    ]
+  }
+}
+DEF EpiChapel Pose {
+  translation 19.58 -0.626769 -0.2
+  rotation 0 0 1 -0.032
+  children [
+    Building {
+      translation 64.1 47.97 3.87
+      rotation 1 0 0 4.6928012867022945e-06
+      size 12 28 8
+      roofCoords [
+        -6 -14 4
+        0 -14 6
+        0 14 6
+        -6 14 4
+        6 -14 4
+        6 14 4
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 1 0.7 0.8
+      }
+    }
+    Building {
+      translation 64.96 61.54 3.87
+      rotation 2.3463999999870816e-06 -2.3463999999870816e-06 0.9999999999944944 1.5708
+      size 12 28 8
+      roofCoords [
+        -6 -14 4
+        0 -14 6
+        0 14 6
+        -6 14 4
+        6 -14 4
+        6 14 4
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 1 0.7 0.8
+      }
+    }
+    Building {
+      translation 69.54 34.01 3.86994
+      rotation 2.3463999999870816e-06 -2.3463999999870816e-06 0.9999999999944944 1.5708
+      size 12 32 8
+      roofCoords [
+        -6 -16 4
+        0 -16 6
+        0 16 6
+        -6 16 4
+        6 -16 4
+        6 16 4
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 1 0.7 0.8
+      }
+    }
+    Building {
+      translation 85.73 42.78 3.86994
+      rotation 5.625379999984515e-15 -2.346399999993541e-06 0.9999999999972473 -3.1415853071795863
+      size 9 34 8
+      roofCoords [
+        -4.5 -17 4
+        0 -17 6
+        0 17 6
+        -4.5 17 4
+        4.5 -17 4
+        4.5 17 4
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 1 0.7 0.8
+      }
+    }
+    Building {
+      translation 93.38 51.02 3.86994
+      rotation 2.3464099999870814e-06 2.3464099999870814e-06 -0.9999999999944944 1.57079
+      size 9 26 8
+      roofCoords [
+        -4.5 -13 4
+        0 -13 6
+        0 13 6
+        -4.5 13 4
+        4.5 -13 4
+        4.5 13 4
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 1 0.7 0.8
+      }
+    }
+  ]
+}
+DEF BCM Pose {
+  translation 74.5717 190.329 0
+  children [
+    Building {
+      translation 0 0 4.5
+      size 24 30 10
+      roofCoords [
+        -12 -15 5
+        0 -15 7
+        0 15 7
+        -12 15 5
+        12 -15 5
+        12 15 5
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.6 0.6 0.7
+      }
+    }
+    Building {
+      translation 6.59 14.93 4.5
+      rotation 0 0 1 -1.5707953071795862
+      size 12 24 10
+      roofCoords [
+        -6 -12 5
+        0 -12 7
+        0 12 7
+        -6 12 5
+        6 -12 5
+        6 12 5
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.6 0.6 0.7
+      }
+    }
+    Building {
+      translation 1.5906e-06 -15.07 5.5
+      rotation 0 0 1 -1.5707953071795862
+      size 12 40 11
+      roofCoords [
+        -6 -20 5.5
+        0 -20 7.5
+        0 20 7.5
+        -6 20 5.5
+        6 -20 5.5
+        6 20 5.5
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.6 0.6 0.7
+      }
+    }
+  ]
+}
+DEF Regions Pose {
+  translation 296.532 26.3197 0
+  rotation 0 0 1 -0.05
+  children [
+    Building {
+      translation 0 0 4.5
+      size 14 24 10
+      roofCoords [
+        -7 -12 5
+        7 -12 5
+        7 12 5
+        -7 12 5
+      ]
+      roofIndex [
+        0, 1, 2, 3
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.4 0.4 0.5
+      }
+    }
+    Building {
+      translation -3.05 0 4.5
+      size 8 34 10
+      roofCoords [
+        -4 -17 5
+        4 -17 5
+        4 17 5
+        -4 17 5
+      ]
+      roofIndex [
+        0, 1, 2, 3
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.4 0.4 0.5
+      }
+    }
+  ]
+}
+DEF Wesley Pose {
+  translation 220.972 30.729 0
+  children [
+    Building {
+      translation 0 0 4.5
+      size 14 38 10
+      roofCoords [
+        -7 -19 5
+        0 -19 7
+        0 19 7
+        -7 19 5
+        7 -19 5
+        7 19 5
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.6 0.6 0.7
+      }
+    }
+    Building {
+      translation -2.38005 19.27 4.5
+      rotation 0 0 1 1.5708
+      size 11 19 10
+      roofCoords [
+        -5.5 -9.5 5
+        0 -9.5 7
+        0 9.5 7
+        -5.5 9.5 5
+        5.5 -9.5 5
+        5.5 9.5 5
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.6 0.6 0.7
+      }
+    }
+    Building {
+      translation 4.00005 -8.24 4.5
+      rotation 0 0 1 1.5708
+      size 10 22 10
+      roofCoords [
+        -5 -11 5
+        0 -11 7
+        0 11 7
+        -5 11 5
+        5 -11 5
+        5 11 5
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.6 0.6 0.7
+      }
+    }
+  ]
+}
+DEF PracticeFacility Pose {
+  translation 622 184 5.5
+  children [
+    Building {
+      size 68 140 12
+      roofCoords [
+        -34 -70 6
+        0 -70 12
+        0 70 12
+        -34 70 6
+        34 -70 6
+        34 70 6
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+      }
+    }
+    Building {
+      translation -53.15 39.55 -1
+      size 38 60 10
+      roofCoords [
+        -19 -30 5
+        19 -30 5
+        19 30 5
+        -19 30 5
+      ]
+      roofIndex [
+        0, 1, 2, 3
+      ]
+      roofAppearance Plaster {
+        colorOverride 0.95 0.95 0.7
+      }
+    }
+  ]
+}
+DEF AquaticCenter Pose {
+  translation 391.48 42.06 5.5
+  rotation 0 0 1 1.5708
+  children [
+    Building {
+      size 40 64 12
+      roofCoords [
+        -20 -32 6
+        0 -32 16
+        0 32 16
+        -20 32 6
+        20 -32 6
+        20 32 6
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.6 0.5 0.6
+      }
+    }
+    Building {
+      translation 27.21 11.26 -1
+      size 16 34 10
+      roofCoords [
+        -8 -17 5
+        8 -17 5
+        8 17 5
+        -8 17 5
+      ]
+      roofIndex [
+        0, 1, 2, 3
+      ]
+      roofAppearance Plaster {
+      }
+    }
+    Building {
+      translation 39.05 6.63 -1
+      size 8 44 10
+      roofCoords [
+        -4 -22 5
+        4 -22 5
+        4 22 5
+        -4 22 5
+      ]
+      roofIndex [
+        0, 1, 2, 3
+      ]
+      roofAppearance Plaster {
+      }
+    }
+    Building {
+      translation 54.17 -24.89 -1
+      size 38 36 10
+      roofCoords [
+        -19 -18 5
+        19 -18 5
+        19 18 5
+        -19 18 5
+      ]
+      roofIndex [
+        0, 1, 2, 3
+      ]
+      roofAppearance Plaster {
+      }
+    }
+    Pose {
+      translation 59.57 9.59 -5.93997
+      rotation 0.5773509358560258 -0.577349935856137 0.577349935856137 2.09439
+      children [
+        Shape {
+          appearance GlossyPaint {
+            baseColor 0 0.4 0.8
+          }
+          geometry Rectangle {
+            size 25 23
+          }
+        }
+      ]
+    }
+  ]
+}
+DEF AthleticComplex Pose {
+  translation 490.1 267.71 4.5
+  children [
+    Building {
+      rotation 0 0 1 1.5708
+      size 44 108 10
+      roofCoords [
+        -22 -54 5
+        22 -54 5
+        22 54 5
+        -22 54 5
+      ]
+      roofIndex [
+        0, 1, 2, 3
+      ]
+      roofAppearance Plaster {
+        colorOverride 0.3 0.24 0.3
+      }
+    }
+    Building {
+      translation -73.44 -13.1503 0.3
+      rotation 0 0 1 -3.1415853071795863
+      size 44 28 10
+      roofCoords [
+        -22 -14 5
+        22 -14 5
+        22 14 5
+        -22 14 5
+      ]
+      roofIndex [
+        0, 1, 2, 3
+      ]
+      roofAppearance Plaster {
+        colorOverride 0.95 0.95 0.7
+      }
+    }
+  ]
+}
+DEF HotelCapstone Pose {
+  translation 276.574 257.341 0
+  rotation 0 0 1 -0.04
+  children [
+    Building {
+      translation 0 0 5.5
+      size 14 50 12
+      roofCoords [
+        -7 -25 6
+        0 -25 9
+        0 25 9
+        -7 25 6
+        7 -25 6
+        7 25 6
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.4 0.5 0.7
+      }
+    }
+    Building {
+      translation 1.31003 -26.76 5.5
+      rotation 0 0 1 -1.5707953071795862
+      size 20 70 12
+      roofCoords [
+        -10 -35 6
+        0 -35 9
+        0 35 9
+        -10 35 6
+        10 -35 6
+        10 35 6
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.4 0.5 0.7
+      }
+    }
+    Building {
+      translation 1.31001 25.81 5.5
+      rotation 0 0 1 -1.5707953071795862
+      size 20 70 12
+      roofCoords [
+        -10 -35 6
+        0 -35 9
+        0 35 9
+        -10 35 6
+        10 -35 6
+        10 35 6
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.4 0.5 0.7
+      }
+    }
+  ]
+}
+DEF Moody Pose {
+  translation 164.394 470.673 0
+  rotation 0 0 1 -1.6107953071795862
+  children [
+    Building {
+      translation 0 -6.39 8.5
+      size 30 84 18
+      roofCoords [
+        -15 -42 9
+        0 -42 13
+        0 42 13
+        -15 42 9
+        15 -42 9
+        15 42 9
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.4 0.5 0.7
+      }
+    }
+    Building {
+      translation 3.46012 46.93 4.5
+      rotation 0 0 1 1.5708
+      size 20 40 10
+      roofCoords [
+        -10 -20 5
+        0 -20 7
+        0 20 7
+        -10 20 5
+        10 -20 5
+        10 20 5
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.4 0.5 0.7
+      }
+    }
+    Building {
+      translation 38.1401 -37.3098 5.5
+      rotation 0 0 1 1.5708
+      size 14 88 12
+      roofCoords [
+        -7 -44 6
+        0 -44 9
+        0 44 9
+        -7 44 6
+        7 -44 6
+        7 44 6
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.4 0.5 0.7
+      }
+    }
+    Building {
+      translation 34.4801 23.0702 5.5
+      rotation 0 0 1 1.5708
+      size 20 88 12
+      roofCoords [
+        -10 -44 6
+        0 -44 9
+        0 44 9
+        -10 44 6
+        10 -44 6
+        10 44 6
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.4 0.5 0.7
+      }
+    }
+  ]
+}
+DEF TrangleBank Pose {
+  translation 104.73 275.38 0
+  children [
+    Building {
+      translation -16.26 -4.51 3.5
+      size 10 15 8
+      roofCoords [
+        7.5 -18 4.1
+        7.5 18 4.1
+        -20 0 4.1
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.4 0.5 0.7
+      }
+    }
+  ]
+}
+DEF TempleEmanu Pose {
+  translation 166.67 270.95 0
+  children [
+    Building {
+      translation -17.36 0 4.5
+      size 16 30 10
+      roofCoords [
+        -8 -15 5
+        0 -15 8
+        0 15 8
+        -8 15 5
+        8 -15 5
+        8 15 5
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.4 0.5 0.7
+      }
+    }
+    Building {
+      translation -11.88 -7.22001 4.5
+      rotation 0 0 1 -1.5707953071795862
+      size 9 9 10
+      roofCoords [
+        -4.5 -4.5 5
+        0 -4.5 8
+        0 4.5 8
+        -4.5 4.5 5
+        4.5 -4.5 5
+        4.5 4.5 5
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.4 0.5 0.7
+      }
+    }
+    Building {
+      translation -11.88 7.05999 4.5
+      rotation 0 0 1 -1.5707953071795862
+      size 9 9 10
+      roofCoords [
+        -4.5 -4.5 5
+        0 -4.5 8
+        0 4.5 8
+        -4.5 4.5 5
+        4.5 -4.5 5
+        4.5 4.5 5
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.4 0.5 0.7
+      }
+    }
+  ]
+}
+DEF Hillel Pose {
+  translation 167.04 280.96 0
+  rotation 0 0 1 3.14159
+  children [
+    Building {
+      translation -17.36 0 4.5
+      size 16 30 10
+      roofCoords [
+        -8 -15 5
+        0 -15 8
+        0 15 8
+        -8 15 5
+        8 -15 5
+        8 15 5
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.4 0.5 0.7
+      }
+    }
+    Building {
+      translation -10.22 -7.22001 4.5
+      rotation 0 0 1 -1.5707953071795862
+      size 9 9 10
+      roofCoords [
+        -4.5 -4.5 5
+        0 -4.5 8
+        0 4.5 8
+        -4.5 4.5 5
+        4.5 -4.5 5
+        4.5 4.5 5
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.4 0.5 0.7
+      }
+    }
+    Building {
+      translation -17.16 7.05999 4.5
+      rotation 0 0 1 -1.5707953071795862
+      size 9 21 10
+      roofCoords [
+        -4.5 -10.5 5
+        0 -10.5 7
+        0 10.5 7
+        -4.5 10.5 5
+        4.5 -10.5 5
+        4.5 10.5 5
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.4 0.5 0.7
+      }
+    }
+  ]
+}
+DEF EastEdge Pose {
+  translation 651.138 922.694 -0.4
+  rotation 0 0 1 1.63
+  children [
+    Building {
+      translation -24.48 0 8.5
+      size 20 100 18
+      roofCoords [
+        -10 -50 9
+        0 -50 11
+        0 50 11
+        -10 50 9
+        10 -50 9
+        10 50 9
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.8 0.8 0.8
+      }
+    }
+    Building {
+      translation 24.62 0 8.5
+      size 20 100 18
+      roofCoords [
+        -10 -50 9
+        0 -50 11
+        0 50 11
+        -10 50 9
+        10 -50 9
+        10 50 9
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.8 0.8 0.8
+      }
+    }
+    Building {
+      translation 0.000121806 42.58 8.5
+      rotation 0 0 1 1.5708
+      size 14 68 18
+      roofCoords [
+        -7 -34 9
+        0 -34 11
+        0 34 11
+        -7 34 9
+        7 -34 9
+        7 34 9
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.8 0.8 0.8
+      }
+    }
+    Building {
+      translation 0.000437588 -43.39 8.5
+      rotation 0 0 1 1.5708
+      size 14 68 18
+      roofCoords [
+        -7 -34 9
+        0 -34 11
+        0 34 11
+        -7 34 9
+        7 -34 9
+        7 34 9
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.8 0.8 0.8
+      }
+    }
+    Building {
+      translation 73.1 0 8.5
+      size 26 90 18
+      roofCoords [
+        -13 -45 9
+        0 -45 11
+        0 45 11
+        -13 45 9
+        13 -45 9
+        13 45 9
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.8 0.8 0.8
+      }
+    }
+    Building {
+      translation 120.87 0 8.5
+      size 20 100 18
+      roofCoords [
+        -10 -50 9
+        0 -50 11
+        0 50 11
+        -10 50 9
+        10 -50 9
+        10 50 9
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.8 0.8 0.8
+      }
+    }
+    Building {
+      translation 162.11 0 8.5
+      size 20 100 18
+      roofCoords [
+        -10 -50 9
+        0 -50 11
+        0 50 11
+        -10 50 9
+        10 -50 9
+        10 50 9
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.8 0.8 0.8
+      }
+    }
+    Building {
+      translation 140.88 43.29 8.5
+      rotation 0 0 1 1.5707996938995747
+      size 14 46 18
+      roofCoords [
+        -7 -23 9
+        0 -23 11
+        0 23 11
+        -7 23 9
+        7 -23 9
+        7 23 9
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.8 0.8 0.8
+      }
+    }
+    Building {
+      translation 140.88 -42.12 8.5
+      rotation 0 0 1 1.5707996938995747
+      size 14 46 18
+      roofCoords [
+        -7 -23 9
+        0 -23 11
+        0 23 11
+        -7 23 9
+        7 -23 9
+        7 23 9
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.8 0.8 0.8
+      }
+    }
+    Building {
+      translation 210.02 0 8.5
+      size 20 66 18
+      roofCoords [
+        -10 -33 9
+        0 -33 11
+        0 33 11
+        -10 33 9
+        10 -33 9
+        10 33 9
+      ]
+      roofIndex [
+        0, 1, 2, 3, -1, 1, 4, 5, 2, -1
+        0, 4, 1, -1, 3, 2, 5
+      ]
+      roofAppearance Pavement {
+        colorOverride 0.8 0.8 0.8
+      }
+    }
+  ]
+}
+Road {
+  translation 96 228 0
+  name "4th"
+  width 14
+  numberOfForwardLanes 2
+  lines [
+    RoadLine {
+      color 1 0.8 0.2
+      type "double"
+      width 0.2
+    }
+  ]
+  wayPoints [
+    -50 0 0
+    105 0 0
+  ]
+}
+Road {
+  translation 185 1 0
+  rotation 0 0 1 1.5
+  name "9th"
+  numberOfForwardLanes 2
+  lines []
+  wayPoints [
+    0 0 0
+    335 0 0
+    355 -12 0
+    465 -12 0
+  ]
+}
+Road {
+  name "5th"
+  numberOfForwardLanes 2
+  lines []
+  wayPoints [
+    37 75 0
+    315 58 0
+  ]
+}
+Road {
+  translation 400 495 0
+  name "2nd"
+  width 14
+  numberOfLanes 4
+  numberOfForwardLanes 2
+  lines [
+    RoadLine {
+    }
+    RoadLine {
+      color 1 0.8 0.2
+      type "double"
+      width 0.2
+    }
+  ]
+  wayPoints [
+    -297 20 0
+    -71 -5 0
+    355 0 0
+  ]
+}
+Road {
+  translation 562 301 0
+  rotation 0 0 1 1.5707996938995747
+  name "Colliseum W"
+  width 9
+  lines [
+    RoadLine {
+      color 1 0.8 0.3
+      type "double"
+      width 0.2
+    }
+  ]
+  wayPoints [
+    -40 -196 0
+    -40 -10 0
+    -20 0 0
+    175 0 0
+  ]
+}
+Road {
+  translation 560 497 0
+  rotation 0 0 1 1.5707996938995747
+  name "Colliseum E"
+  width 14
+  lines [
+    RoadLine {
+      color 1 0.8 0.3
+      type "double"
+      width 0.2
+    }
+  ]
+  wayPoints [
+    0 0 0
+    100 0 0
+    102 -37 0
+  ]
+}
+Road {
+  translation 337 315 0
+  name "Colliseum Loop Entrance"
+  width 9
+  lines [
+    RoadLine {
+      color 1 0.8 0.3
+      type "double"
+      width 0.2
+    }
+  ]
+  wayPoints [
+    0 0 0
+    35 0 0
+  ]
+}
+Road {
+  translation 380 325 0
+  name "Colliseum Loop"
+  numberOfForwardLanes 2
+  lines []
+  wayPoints [
+    -11 -8 0
+    0 0 0
+    160 0 0
+    160 -10 0
+    160 -20 0
+    0 -20 0
+    -11 -12 0
+  ]
+}
+Road {
+  translation 201 341 0
+  rotation 0 0 1 3.141592653589793
+  name "Moody Loop"
+  numberOfForwardLanes 2
+  lines []
+  wayPoints [
+    -11 0 0
+    0 0 0
+    114 0 0
+    110 -10 0
+    114 -20 0
+    0 -20 0
+    -15 -17 0
+  ]
+}
+AddLanesRoadSegment {
+  translation 562.36 473.44 0
+  rotation 0 0 1 1.5708
+  width 8.3
+  length 8
+  numberOfLanes 3
+}
+Road {
+  translation 315 0 0
+  rotation 0 0 1 1.52
+  name "Bryant"
+  width 14
+  numberOfLanes 4
+  lines [
+    RoadLine {
+    }
+    RoadLine {
+      color 0.9 0.8 0.3
+      type "double"
+      width 0.1
+    }
+  ]
+  wayPoints [
+    0 0 0
+    1172 0 0
+  ]
+}
+Road {
+  translation 363 862 0
+  name "Jackson"
+  width 14
+  lines [
+    RoadLine {
+      color 1 0.8 0.3
+      type "double"
+      width 0.2
+    }
+  ]
+  wayPoints [
+    0 0 0
+    228 0 0
+    220 -47 0
+    268 -45 0
+  ]
+}
+RoadIntersection {
+  translation 340 495.5 0.2
+  rotation 0 0 1 0.73
+  name "2nd_Bryant"
+  id "2nd_Bryant"
+  roadsWidth 14
+}
+RoadIntersection {
+  translation 560 493 0.2
+  rotation 0 0 1 0.7853996938995746
+  name "2nd_Colliseum"
+  id "2nd_Colliseum"
+  roadsWidth 14
+}
+Solid {
+  translation 32.6224 80.8748 0
+  rotation 0 0 1 -0.048
+  children [
+    ParkingLines {
+      translation 5 0.5 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 36
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 19.58 4.33004 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 30
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 24.21 4.33004 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 30
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 38.34 1.22004 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 32
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 43.12 1.22004 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 32
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    Shape {
+      appearance Asphalt {
+      }
+      geometry IndexedFaceSet {
+        coord Coordinate {
+          point [
+            0 0 0
+            52 0 0
+            52 55 0
+            0 55 0
+          ]
+        }
+        coordIndex [
+          0, 1, 2, 3
+        ]
+      }
+    }
+  ]
+  name "Lot0"
+}
+Solid {
+  translation 246.179 2.46794 0
+  rotation 0 0 1 -0.048
+  children [
+    ParkingLines {
+      translation 5 0.5 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 34
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 19.58 4.33004 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 30
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 24.21 4.33004 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 30
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    Shape {
+      appearance Asphalt {
+      }
+      geometry IndexedFaceSet {
+        coord Coordinate {
+          point [
+            0 0 0
+            30 0 0
+            30 52 0
+            0 52 0
+          ]
+        }
+        coordIndex [
+          0, 1, 2, 3
+        ]
+      }
+    }
+  ]
+  name "Lot1"
+}
+Solid {
+  translation 571.133 480.346 0
+  rotation 0 0 1 -1.57
+  children [
+    ParkingLines {
+      translation 5 0.5 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 108
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 99.36 0.500317 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 108
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 18.95 0.500041 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 108
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 23.71 0.500062 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 108
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 38.34 0.500109 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 108
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 42.81 0.500129 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 108
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 85.12 0.500266 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 108
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 80.43 0.500255 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 108
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 58.66 0.500182 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 108
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 63.09 0.500191 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 108
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    Shape {
+      appearance Asphalt {
+      }
+      geometry IndexedFaceSet {
+        coord Coordinate {
+          point [
+            0 0 0
+            100 0 0
+            100 180 0
+            0 180 0
+          ]
+        }
+        coordIndex [
+          0, 1, 2, 3
+        ]
+      }
+    }
+  ]
+  name "Lot2"
+}
+Solid {
+  translation 671.338 527.659 0
+  rotation 0 0 1 1.57
+  children [
+    ParkingLines {
+      translation 5 6.89 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 52
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 6.07966 86.8 0.1
+      rotation 0 0 -1 -5.307179586466759e-06
+      numberOfCarParks 29
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 6.08008 1.68995e-12 0.1
+      rotation 0 0 1 5.307156870259904e-06
+      numberOfCarParks 29
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 85.2597 26.32 0.1
+      rotation 0 0 1 1.5708
+      numberOfCarParks 33
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 61.8597 35.09 0.1
+      rotation 0 0 1 1.5708
+      numberOfCarParks 27
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 57.2497 35.09 0.1
+      rotation 0 0 1 1.5708
+      numberOfCarParks 27
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 40.8396 79.42 0.1
+      rotation 0 0 1 -3.1415853071795863
+      numberOfCarParks 18
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 40.8396 74.78 0.1
+      rotation 0 0 1 -3.1415853071795863
+      numberOfCarParks 18
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 40.8396 45.3 0.1
+      rotation 0 0 1 -3.1415853071795863
+      numberOfCarParks 18
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 40.8396 40.57 0.1
+      rotation 0 0 1 -3.1415853071795863
+      numberOfCarParks 18
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 40.8396 58.64 0.1
+      rotation 0 0 1 -3.1415853071795863
+      numberOfCarParks 18
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 40.8396 63.42 0.1
+      rotation 0 0 1 -3.1415853071795863
+      numberOfCarParks 18
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 40.8396 26.51 0.1
+      rotation 0 0 1 -3.1415853071795863
+      numberOfCarParks 18
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 40.8396 21.75 0.1
+      rotation 0 0 1 -3.1415853071795863
+      numberOfCarParks 18
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    Shape {
+      appearance Asphalt {
+      }
+      geometry IndexedFaceSet {
+        coord Coordinate {
+          point [
+            0 0 0
+            50 0 0
+            50 26 0
+            86 26 0
+            86 76 0
+            50 76 0
+            50 92 0
+            0 92 0
+          ]
+        }
+        coordIndex [
+          0, 1, 2, 3, 4, 5, 6, 7
+        ]
+      }
+    }
+  ]
+  name "Lot3"
+}
+Solid {
+  translation 351.011 593.251 0
+  rotation 0 0 -1 1.57
+  children [
+    ParkingLines {
+      translation 69.77 14.3 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 90
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 4.69 14.3 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 90
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 47.55 14.3 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 90
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 52.2 14.3 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 90
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 28.42 14.3 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 90
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 23.81 14.3 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 90
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    Shape {
+      appearance Asphalt {
+      }
+      geometry IndexedFaceSet {
+        coord Coordinate {
+          point [
+            0 0 0
+            70 0 0
+            70 165 0
+            0 165 0
+          ]
+        }
+        coordIndex [
+          0, 1, 2, 3
+        ]
+      }
+    }
+  ]
+  name "Lot4"
+}
+Solid {
+  translation 335.674 150.087 0
+  rotation 0 0 1 -0.048
+  children [
+    ParkingLines {
+      translation 5 6.89 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 95
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 6.90001 0.290009 0.1
+      rotation 0 0 -1 -5.307179586466759e-06
+      numberOfCarParks 43
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 46.0394 144.85 0.1
+      rotation 0 0 -1 -5.307179586466759e-06
+      numberOfCarParks 21
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 18.38 13.1701 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 12
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 23.14 13.1701 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 12
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 35.74 13.1701 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 12
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 40.37 13.1701 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 12
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 56.15 13.1701 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 12
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 56.15 41.6401 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 24
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 61.02 41.6401 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 24
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 60.78 13.1701 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 12
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 77.88 7.0201 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 47
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 18.38 41.6501 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 65
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 23 41.6501 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 65
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 35.64 41.6501 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 65
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 40.36 41.6501 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 65
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    Shape {
+      appearance Asphalt {
+      }
+      geometry IndexedFaceSet {
+        coord Coordinate {
+          point [
+            0 0 0
+            78 0 0
+            78 78 0
+            52 78 0
+            52 135 0
+            78 135 0
+            78 150 0
+            0 150 0
+          ]
+        }
+        coordIndex [
+          0, 1, 2, 3, 4, 5, 6, 7
+        ]
+      }
+    }
+  ]
+  name "Lot5"
+}
+Solid {
+  translation 230.902 400.678 0
+  rotation 0 0 1 -0.048
+  children [
+    ParkingLines {
+      translation 19.64 0.170049 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 37
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 5 0.17 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 37
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    Shape {
+      appearance Asphalt {
+      }
+      geometry IndexedFaceSet {
+        coord Coordinate {
+          point [
+            0 0 0
+            20 0 0
+            20 56 0
+            0 56 0
+          ]
+        }
+        coordIndex [
+          0, 1, 2, 3
+        ]
+      }
+    }
+  ]
+  name "Lot6"
+}
+Solid {
+  translation 100.37 240.951 0
+  children [
+    ParkingLines {
+      translation 31.75 7.53009 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 36
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    ParkingLines {
+      translation 20.26 7.53009 0.1
+      rotation 0 0 1 1.5707996938995747
+      numberOfCarParks 30
+      carParkLength 5
+      carParkWidth 1.5
+    }
+    Shape {
+      appearance Asphalt {
+      }
+      geometry IndexedFaceSet {
+        coord Coordinate {
+          point [
+            0 0 0
+            32 0 0
+            32 62 0
+            0 62 0
+          ]
+        }
+        coordIndex [
+          0, 1, 2, 3
+        ]
+      }
+    }
+  ]
+  name "Lot7"
+}
+Solid {
+  translation 706.827 870.063 0
+  rotation 0 0 1 0.066
+  children [
+    Shape {
+      appearance Asphalt {
+      }
+      geometry IndexedFaceSet {
+        coord Coordinate {
+          point [
+            0 0 0
+            20 0 0
+            20 284 0
+            0 284 0
+          ]
+        }
+        coordIndex [
+          0, 1, 2, 3
+        ]
+      }
+    }
+  ]
+  name "Lot8"
+}
+Solid {
+  translation 706.827 870.063 0
+  rotation 0 0 1 1.6368
+  children [
+    Shape {
+      appearance Asphalt {
+      }
+      geometry IndexedFaceSet {
+        coord Coordinate {
+          point [
+            0 0 0
+            18 0 0
+            18 120 0
+            0 120 0
+          ]
+        }
+        coordIndex [
+          0, 1, 2, 3
+        ]
+      }
+    }
+  ]
+  name "Lot9"
+}
+Solid {
+  translation 700.572 964.772 0
+  rotation 0 0 1 1.6368
+  children [
+    Shape {
+      appearance Asphalt {
+      }
+      geometry IndexedFaceSet {
+        coord Coordinate {
+          point [
+            0 0 0
+            18 0 0
+            18 120 0
+            0 120 0
+          ]
+        }
+        coordIndex [
+          0, 1, 2, 3
+        ]
+      }
+    }
+  ]
+  name "Lot10"
+}
+Solid {
+  translation 697.182 1016.07 0
+  rotation 0 0 1 1.6368
+  children [
+    Shape {
+      appearance Asphalt {
+      }
+      geometry IndexedFaceSet {
+        coord Coordinate {
+          point [
+            0 0 0
+            18 0 0
+            18 120 0
+            0 120 0
+          ]
+        }
+        coordIndex [
+          0, 1, 2, 3
+        ]
+      }
+    }
+  ]
+  name "Lot11"
+}
+Solid {
+  translation 691.426 1103.03 0
+  rotation 0 0 1 1.6368
+  children [
+    Shape {
+      appearance Asphalt {
+      }
+      geometry IndexedFaceSet {
+        coord Coordinate {
+          point [
+            0 0 0
+            18 0 0
+            18 120 0
+            0 120 0
+          ]
+        }
+        coordIndex [
+          0, 1, 2, 3
+        ]
+      }
+    }
+  ]
+  name "Lot12"
+}
+Solid {
+  translation 581.723 861.794 0
+  rotation 0 0 1 0.066
+  children [
+    Shape {
+      appearance Asphalt {
+      }
+      geometry IndexedFaceSet {
+        coord Coordinate {
+          point [
+            0 0 0
+            20 0 0
+            20 251 0
+            0 252 0
+          ]
+        }
+        coordIndex [
+          0, 1, 2, 3
+        ]
+      }
+    }
+  ]
+  name "Lot13"
+}
+Solid {
+  translation 389.591 379.947 0
+  rotation 0 0 1 -0.523595307179586
+  children [
+    Shape {
+      appearance Grass {
+        colorOverride 0 0.7 0.2
+      }
+      geometry IndexedFaceSet {
+        coord Coordinate {
+          point [
+            0 0 0
+            30 0 0
+            102 18 0
+            102 58 0
+            94 90 0
+            76 110 0
+            32 110 0
+            0 105 0
+          ]
+        }
+        coordIndex [
+          0, 1, 2, 3, 4, 5, 6, 7
+        ]
+      }
+    }
+    Shape {
+      appearance SandyGround {
+        colorOverride 0.7 0.5 0.4
+      }
+      geometry IndexedFaceSet {
+        coord Coordinate {
+          point [
+            0 0 0
+            30 0 0
+            102 18 0
+            102 58 0
+            94 90 0
+            76 110 0
+            32 110 0
+            0 105 0
+            -4 -4 0
+            33 -4 0
+            106 15 0
+            106 61 0
+            97 93 0
+            77 114 0
+            33 114 0
+            -5 109 0
+          ]
+        }
+        coordIndex [
+          8, 9, 10, 11, 12, 13, 14, 15, 8, 0
+          7, 6, 5, 4, 3, 2, 1, 0
+        ]
+      }
+    }
+    Pose {
+      translation 8.9 8.73 0.2
+      children [
+        Shape {
+          appearance SandyGround {
+            colorOverride 0.7 0.5 0.4
+          }
+          geometry IndexedFaceSet {
+            coord Coordinate {
+              point [
+                0 0 0
+                25 0 0
+                25 25 0
+                0 25 0
+                -2 -2 0
+                37 -2 0
+                41 9 0
+                40.5 18 0
+                39 26 0
+                33 35 0
+                23 40.5 0
+                15 41.5 0
+                7 41 0
+                -2 37 0
+              ]
+            }
+            coordIndex [
+              4, 5, 6, 7, 8, 9, 10, 11, 12, 13
+              4, 0, 3, 2, 1, 0
+            ]
+          }
+        }
+      ]
+    }
+  ]
+  name "BaseballDiamond"
+}
+Solid {
+  translation 696.341 83.5 0
+  rotation 0 0 1 0.04
+  children [
+    Shape {
+      appearance Grass {
+        colorOverride 0 0.4 0
+      }
+      geometry IndexedFaceSet {
+        coord Coordinate {
+          point [
+            0 -6 0
+            50 -6 0
+            50 110 0
+            0 110 0
+          ]
+        }
+        coordIndex [
+          0, 1, 2, 3
+        ]
+      }
+    }
+    Shape {
+      appearance ScuffedPlastic {
+        colorOverride 0.6 0.2 0.2
+      }
+      geometry IndexedFaceSet {
+        coord Coordinate {
+          point [
+            0 -6 0
+            50 -6 0
+            50 110 0
+            0 110 0
+            -22 -6 0
+            -14 -30 0
+            0 -44 0
+            14 -52 0
+            25 -53.5 0
+            36 -52 0
+            50 -44 0
+            64 -30 0
+            72 -6 0
+            72 110 0
+            64 134 0
+            50 148 0
+            36 156 0
+            25 157.5 0
+            14 156 0
+            0 148 0
+            -14 134 0
+            -22 110 0
+          ]
+        }
+        coordIndex [
+          4, 5, 6, 7, 8, 9, 10, 11, 12, 13
+          14, 15, 16, 17, 18, 19, 20, 21, 4, 0
+          3, 2, 1, 0
+        ]
+      }
+    }
+  ]
+  name "Track"
+}
+CrossRoadsTrafficLight {
+  translation 339.79 494.87 0
+  name "Light_Bryant_2nd"
+  size 18 17
+}
+CrossRoadsTrafficLight {
+  translation 331.83 314.91 1
+  name "Light_Bryant_Colliseum"
+  size 18 17
+}
+CrossRoadsTrafficLight {
+  translation 359.49 862.16 1
+  name "Light_Bryant_Jackson"
+  size 18 17
+}
+CrossRoadsTrafficLight {
+  translation 560.81 493.42 1
+  name "Light_2nd_Colliseum"
+  size 18 17
+}
+StopSign {
+  translation 194.02 219.51 0
+  rotation 0 0 1 3.14159
+}
+StopSign {
+  translation 183.93 60.78 0
+  rotation 0 0 1 3.14159
+  name "stop sign(1)"
+}
+StopSign {
+  translation 308.51 53.42 0
+  rotation 0 0 1 3.14159
+  name "stop sign(5)"
+}
+StopSign {
+  translation 556.72 307.79 0
+  rotation 0 0 1 3.14159
+  name "stop sign(6)"
+}
+StopSign {
+  translation 194.55 60.13 0
+  rotation 0 0 1 -1.5707953071795862
+  name "stop sign(2)"
+}
+StopSign {
+  translation 195.06 70.42 0
+  rotation 0 0 1 1.01503e-06
+  name "stop sign(3)"
+}
+StopSign {
+  translation 184.7 70.99 0
+  rotation 0 0 1 1.5708
+  name "stop sign(4)"
+}
+TurtleBot3Burger {
+  translation 183.96 6.44506 .05
+  rotation 0 0 1 1.57159
+  controller "<extern>"
+  controllerArgs [
+    ""
+  ]
+  extensionSlot [
+    Solid {
+      name "imu_link"
+    }
+    GPS {
+    }
+    InertialUnit {
+      name "inertial_unit"
+    }
+    RobotisLds01 {
+    }
+  ]
+}
+Solid {
+  translation 115 585 3.78
+  rotation 0 0 1 2.9475
+  children [
+    Shape {
+      appearance CementTiles {
+      }
+      geometry Rectangle {
+        size 1193 10
+      }
+    }
+  ]
+  name "North Boundary"
+}
+Solid {
+  translation 393.02 0.27156 3.78
+  rotation 0 0 1 1.5708003061004252
+  children [
+    Shape {
+      appearance CementTiles {
+      }
+      geometry Rectangle {
+        size 790 10
+      }
+    }
+  ]
+  name "West Boundary"
+}
+Solid {
+  translation 748.806 581.105 3.78
+  rotation 0 0 1 -3.073285307179586
+  children [
+    Shape {
+      appearance CementTiles {
+      }
+      geometry Rectangle {
+        size 1173 10
+      }
+    }
+  ]
+  name "South Boundary"
+}
+Solid {
+  translation 468.8 1169.35 3.78
+  rotation 0 0 1 1.5708003061004252
+  children [
+    Shape {
+      appearance CementTiles {
+      }
+      geometry Rectangle {
+        size 480 10
+      }
+    }
+  ]
+  name "East Boundary"
+}

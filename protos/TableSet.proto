@@ -1,0 +1,81 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Roughcast.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/tables/protos/Table.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Plastic.proto"
+EXTERNPROTO "../protos/CompChair.proto"
+
+PROTO TableSet [
+    field   SFVec3f     translation 0 0 0
+    field   SFRotation  rotation    0 0 1 0
+]
+
+{
+  Pose {
+    translation IS translation
+    rotation IS rotation
+    children [
+      Table {
+        translation 0.02 0 0
+        rotation 0 0 -0.9999999999999999 1.5707953071795862
+        size 0.7 3 0.62
+        trayAppearance Plastic {
+          colorOverride 0.8 0.83 0.82
+        }
+        legAppearance Plastic {
+          colorOverride 0.8 0.83 0.82
+        }
+      }
+      Table {
+        translation 0.02 0.72 0
+        rotation 0 0 -0.9999999999999999 1.5707953071795862
+        size 0.7 3 0.62
+        trayAppearance Plastic {
+          colorOverride 0.8 0.83 0.82
+        }
+        legAppearance Plastic {
+          colorOverride 0.8 0.83 0.82
+        }
+      }
+      Wall {
+        translation 0 0.36 0.6
+        size 3 0.01 0.8
+        appearance Roughcast {
+          colorOverride 0.81 0.96 0.96
+          textureTransform TextureTransform {
+            scale 2.4 1
+          }
+        }
+      }
+      CompChair {
+        translation -.9 1.2 0
+      }
+      CompChair {
+        translation -.3 1.2 0
+      }
+      CompChair {
+        translation .3 1.2 0
+      }
+      CompChair {
+        translation .9 1.2 0
+      }
+      CompChair {
+        rotation 0 0 1 3.14159
+        translation -.9 -.5 0
+      }
+      CompChair {
+        rotation 0 0 1 3.14159
+        translation -.3 -.5 0
+      }
+      CompChair {
+        rotation 0 0 1 3.14159
+        translation .3 -.5 0
+      }
+      CompChair {
+        rotation 0 0 1 3.14159
+        translation .9 -.5 0
+      }
+    ]
+  }
+}

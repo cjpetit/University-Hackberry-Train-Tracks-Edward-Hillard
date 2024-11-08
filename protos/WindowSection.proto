@@ -1,0 +1,151 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Roughcast.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Window.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/VarnishedPine.proto"
+
+PROTO WindowSection [
+    field   SFVec3f     translation 0 0 0
+    field   SFRotation  rotation    0 0 1 0
+]
+
+{
+  Pose {
+    translation IS translation
+    rotation IS rotation
+    children [
+      Window {
+        translation 2.77 6.61178e-07 1.54
+        rotation 0 0 1 1.5708
+        size 0.2 1.7 2.4
+        glassColor 0.3 0.3 0.6
+        bottomWallHeight 0
+        windowHeight 2.4
+        frameSize 0.01 0.2 0.1
+        windowSillSize 0 0
+        frameAppearance VarnishedPine {
+          colorOverride 1 1 1
+        }
+      }
+      Window {
+        translation 16.17 4.98822e-05 1.54
+        rotation 0 0 1 1.5708
+        size 0.2 1.7 2.4
+        glassColor 0.3 0.3 0.6
+        bottomWallHeight 0
+        windowHeight 2.4
+        frameSize 0.01 0.2 0.1
+        windowSillSize 0 0
+        frameAppearance VarnishedPine {
+          colorOverride 1 1 1
+        }
+      }
+      Window {
+        translation 9.46 2.52344e-05 1.54
+        rotation 0 0 1 1.5708
+        size 0.2 1.7 2.4
+        glassColor 0.3 0.3 0.6
+        bottomWallHeight 0
+        windowHeight 2.4
+        frameSize 0.01 0.2 0.1
+        windowSillSize 0 0
+        frameAppearance VarnishedPine {
+          colorOverride 1 1 1
+        }
+      }
+      Window {
+        translation 6.1 1.28933e-05 1.54
+        rotation 0 0 1 1.5708
+        size 0.2 1.7 2.4
+        glassColor 0.3 0.3 0.6
+        bottomWallHeight 0
+        windowHeight 2.4
+        frameSize 0.01 0.2 0.1
+        windowSillSize 0 0
+        frameAppearance VarnishedPine {
+          colorOverride 1 1 1
+        }
+      }
+      Window {
+        translation 12.86 3.7723e-05 1.54
+        rotation 0 0 1 1.5708
+        size 0.2 1.7 2.4
+        glassColor 0.3 0.3 0.6
+        bottomWallHeight 0
+        windowHeight 2.4
+        frameSize 0.01 0.2 0.1
+        windowSillSize 0 0
+        frameAppearance VarnishedPine {
+          colorOverride 1 1 1
+        }
+      }
+      Wall {
+        translation 4.44 1.31876e-05 1.55
+        rotation 0 0 1 1.5708
+        size 0.25 1.66 2.38
+        appearance Roughcast {
+          colorOverride 0.91 0.91 0.67
+          textureTransform TextureTransform {
+            scale 2.4 1
+          }
+        }
+      }
+      Wall {
+        translation 14.51 5.01759e-05 1.55
+        rotation 0 0 1 1.5708
+        size 0.25 1.62 2.38
+        appearance Roughcast {
+          colorOverride 0.91 0.91 0.67
+          textureTransform TextureTransform {
+            scale 2.4 1
+          }
+        }
+      }
+      Wall {
+        translation 7.77 2.54194e-05 1.55
+        rotation 0 0 1 1.5708
+        size 0.25 1.68 2.38
+        appearance Roughcast {
+          colorOverride 0.91 0.91 0.67
+          textureTransform TextureTransform {
+            scale 2.4 1
+          }
+        }
+      }
+      Wall {
+        translation 11.15 3.78346e-05 1.55
+        rotation 0 0 1 1.5708
+        size 0.25 1.72 2.38
+        appearance Roughcast {
+          colorOverride 0.91 0.91 0.67
+          textureTransform TextureTransform {
+            scale 2.4 1
+          }
+        }
+      }
+      Wall {
+        translation 9.39 -2.24057e-06 0
+        rotation 0 0 1 1.5708
+        size 0.25 15.4 1.5
+        appearance Roughcast {
+          colorOverride 1 1 0.76
+          textureTransform TextureTransform {
+            scale 2.4 1
+          }
+        }
+      }
+      Wall {
+        translation 9.39 -2.24057e-06 1.47
+        rotation 0 0 1 1.5708
+        size 0.35 15.4 0.08
+        appearance Roughcast {
+          colorOverride 0.52 0.33 0.17
+          textureTransform TextureTransform {
+            scale 2.4 1
+          }
+        }
+      }
+    ]
+  }
+}

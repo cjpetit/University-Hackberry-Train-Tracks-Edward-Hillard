@@ -1,0 +1,37 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/RedBricks.proto"
+
+PROTO Building [
+    field   SFVec3f     translation     0 0 0
+    field   SFRotation  rotation        0 0 1 0
+    field   SFVec3f     size            10 10 10
+    field   MFVec3f     roofCoords      [0 0 0 1 0 0 1 1 0]
+    field   MFInt32     roofIndex       [0, 1, 2]
+    field   SFNode      roofAppearance  NULL
+]
+
+{
+  Solid {
+    translation IS translation
+    rotation IS rotation
+    children [
+      Shape {
+        appearance RedBricks {
+        }
+        geometry Box {
+          size IS size
+        }
+      }
+      Shape {
+        appearance IS roofAppearance
+        geometry IndexedFaceSet {
+          coord Coordinate {
+            point IS roofCoords
+          }
+          coordIndex IS roofIndex
+        }
+      }
+    ]
+  }
+}

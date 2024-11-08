@@ -1,0 +1,198 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Plastic.proto"
+EXTERNPROTO "../protos/CompChair.proto"
+
+PROTO ThreeStarTable [
+    field   SFVec3f     translation 0 0 0
+    field   SFRotation  rotation    0 0 1 0
+]
+
+{
+  Pose {
+    translation IS translation
+    rotation IS rotation
+    children [
+      Pose {
+        translation 0 0.7 0.62
+        children [
+          Shape {
+            appearance Plastic {
+              colorOverride 0.8 0.83 0.82
+            }
+            geometry Box {
+              size 1.1 1.4 0.02
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -0.606 -0.35 0.62
+        rotation 0 0 1 2.0944
+        children [
+          Shape {
+            appearance Plastic {
+              colorOverride 0.8 0.83 0.82
+            }
+            geometry Box {
+              size 1.1 1.4 0.02
+            }
+          }
+        ]
+      }
+      Pose {
+        translation 0.606 -0.35 0.62
+        rotation 0 0 1 -2.0944
+        children [
+          Shape {
+            appearance Plastic {
+              colorOverride 0.8 0.83 0.82
+            }
+            geometry Box {
+              size 1.1 1.4 0.02
+            }
+          }
+        ]
+      }
+      Pose {
+        translation 0.606 -0.4 0.32
+        rotation 0 0 1 -2.0944
+        children [
+          Shape {
+            appearance Plastic {
+              colorOverride 0.8 0.83 0.82
+            }
+            geometry Box {
+              size 0.08 1.4 0.6
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -0.606 -0.4 0.32
+        rotation 0 0 1 2.0944
+        children [
+          Shape {
+            appearance Plastic {
+              colorOverride 0.8 0.83 0.82
+            }
+            geometry Box {
+              size 0.08 1.4 0.6
+            }
+          }
+        ]
+      }
+      Pose {
+        translation 0 0.7 0.32
+        children [
+          Shape {
+            appearance Plastic {
+              colorOverride 0.8 0.83 0.82
+            }
+            geometry Box {
+              size 0.08 1.4 0.6
+            }
+          }
+        ]
+      }
+      Pose {
+        translation 0 1.4 0.62
+        children [
+          Shape {
+            appearance Plastic {
+              colorOverride 0.8 0.83 0.82
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.55
+            }
+          }
+        ]
+      }
+      Pose {
+        translation 1.212 -0.7 0.62
+        children [
+          Shape {
+            appearance Plastic {
+              colorOverride 0.8 0.83 0.82
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.55
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -1.212 -0.7 0.62
+        children [
+          Shape {
+            appearance Plastic {
+              colorOverride 0.8 0.83 0.82
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.55
+            }
+          }
+        ]
+      }
+      CompChair {
+        translation 0 2.1 0
+      }
+      CompChair {
+        translation -.7 .7 0
+        rotation 0 0 1 1.5708
+      }
+      CompChair {
+        translation -1.819 -1.05 0
+        rotation 0 0 1 2.0944
+      }
+      CompChair {
+        translation .956 .256 0
+        rotation 0 0 1 -.5236
+      }
+      CompChair {
+        translation 1.819 -1.05 0
+        rotation 0 0 1 -2.0944
+      }
+      CompChair {
+        translation -.256 -.956 0
+        rotation 0 0 1 3.6652
+      }
+      Wall {
+        translation 0 0.75 0.6
+        rotation 0 0 1 1.5708
+        size 1.5 0.01 0.8
+        appearance Roughcast {
+          colorOverride 0.81 0.96 0.96
+          textureTransform TextureTransform {
+            scale 2.4 1
+          }
+        }
+      }
+      Wall {
+        translation .6495 -.375 0.6
+        rotation 0 0 1 -.5236
+        size 1.5 0.01 0.8
+        appearance Roughcast {
+          colorOverride 0.81 0.96 0.96
+          textureTransform TextureTransform {
+            scale 2.4 1
+          }
+        }
+      }
+      Wall {
+        translation -.6495 -.375 0.6
+        rotation 0 0 1 3.6652
+        size 1.5 0.01 0.8
+        appearance Roughcast {
+          colorOverride 0.81 0.96 0.96
+          textureTransform TextureTransform {
+            scale 2.4 1
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,277 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/VarnishedPine.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/solids/protos/SolidTorus.proto"
+
+PROTO WoodenChair [
+    field   SFVec3f     translation 0 0 0
+    field   SFRotation  rotation    0 0 1 0
+]
+
+{
+  Pose {
+    translation IS translation
+    rotation IS rotation
+    children [
+      SolidTorus {
+        translation -0.180813 0 0.605832
+        rotation 0 1 0 1.4218
+        majorRadius 0.15
+        minorRadius 0.016
+        appearance VarnishedPine {
+        }
+      }
+      Pose {
+        translation 0 0 0.36
+        children [
+          Shape {
+            appearance VarnishedPine {
+            }
+            geometry Cylinder {
+              height 0.03
+              radius 0.2
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -0.12 -0.12 0.18
+        rotation -0.7071067811865475 0.7071067811865475 0 0.2617996938995747
+        children [
+          Shape {
+            appearance VarnishedPine {
+            }
+            geometry Cylinder {
+              height 0.36
+              radius 0.016
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -0.12 0.12 0.18
+        rotation 0.7071068905932484 0.7071066717798297 0 0.2617996938995747
+        children [
+          Shape {
+            appearance VarnishedPine {
+            }
+            geometry Cylinder {
+              height 0.36
+              radius 0.016
+            }
+          }
+        ]
+      }
+      Pose {
+        translation 0.12 0.12 0.18
+        rotation 0.7071067264831823 -0.7071068358899085 0 0.2617996938995747
+        children [
+          Shape {
+            appearance VarnishedPine {
+            }
+            geometry Cylinder {
+              height 0.36
+              radius 0.016
+            }
+          }
+        ]
+      }
+      Pose {
+        translation 0.12 -0.12 0.18
+        rotation 0.7071066444281413 0.7071069179449273 0 -0.2617996938995747
+        children [
+          Shape {
+            appearance VarnishedPine {
+            }
+            geometry Cylinder {
+              height 0.36
+              radius 0.016
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -0.136286 -0.15 0.485157
+        rotation 0 1 0 -0.3926996938995747
+        children [
+          Shape {
+            appearance VarnishedPine {
+            }
+            geometry Cylinder {
+              height 0.26
+              radius 0.016
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -0.136286 0.15 0.485157
+        rotation 0 1 0 -0.3926996938995747
+        children [
+          Shape {
+            appearance VarnishedPine {
+            }
+            geometry Cylinder {
+              height 0.26
+              radius 0.016
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -0.172446 0 0.558673
+        rotation 0 1 0 -0.12
+        children [
+          Shape {
+            appearance VarnishedPine {
+            }
+            geometry Cylinder {
+              height 0.37
+              radius 0.011
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -0.172515 0.0796304 0.558454
+        rotation 0.3303504247281061 0.9438583563660174 0 -0.16
+        children [
+          Shape {
+            appearance VarnishedPine {
+            }
+            geometry Cylinder {
+              height 0.36
+              radius 0.01
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -0.172515 -0.0796304 0.558454
+        rotation -0.3303500463510945 0.9438584887978863 0 -0.16
+        children [
+          Shape {
+            appearance VarnishedPine {
+            }
+            geometry Cylinder {
+              height 0.36
+              radius 0.01
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -0.12 -6.7342e-08 0.169997
+        rotation 1 0 0 1.5707996938995747
+        children [
+          Shape {
+            appearance VarnishedPine {
+            }
+            geometry Cylinder {
+              height 0.24
+              radius 0.01
+            }
+          }
+        ]
+      }
+      Pose {
+        translation 0.12 -6.7342e-08 0.169997
+        rotation 1 0 0 1.5707996938995747
+        children [
+          Shape {
+            appearance VarnishedPine {
+            }
+            geometry Cylinder {
+              height 0.24
+              radius 0.01
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -5.66873e-14 -0.14 0.099997
+        rotation 0 1 0 1.5707996938995747
+        children [
+          Shape {
+            appearance VarnishedPine {
+            }
+            geometry Cylinder {
+              height 0.26
+              radius 0.012
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -5.66873e-14 0.13 0.099997
+        rotation 0 1 0 1.5707996938995747
+        children [
+          Shape {
+            appearance VarnishedPine {
+            }
+            geometry Cylinder {
+              height 0.26
+              radius 0.012
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -0.05 1.68355e-07 0.099997
+        rotation 1 0 0 1.5707996938995747
+        children [
+          Shape {
+            appearance VarnishedPine {
+            }
+            geometry Cylinder {
+              height 0.26
+              radius 0.007
+            }
+          }
+        ]
+      }
+      Pose {
+        translation 0.05 1.68355e-07 0.099997
+        rotation 1 0 0 1.5707996938995747
+        children [
+          Shape {
+            appearance VarnishedPine {
+            }
+            geometry Cylinder {
+              height 0.26
+              radius 0.007
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -0.0485129 0.173076 0.488126
+        rotation -0.19611613513818402 0.9805806756909201 0 1.5707996938995747
+        children [
+          Shape {
+            appearance VarnishedPine {
+            }
+            geometry Cylinder {
+              height 0.18
+              radius 0.016
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -0.0485129 -0.173076 0.488126
+        rotation 0.19611600519761735 0.9805807016790247 0 1.5707996938995747
+        children [
+          Shape {
+            appearance VarnishedPine {
+            }
+            geometry Cylinder {
+              height 0.18
+              radius 0.016
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

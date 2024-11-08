@@ -1,0 +1,134 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Plastic.proto"
+
+PROTO CompChair [
+    field   SFVec3f     translation 0 0 0
+    field   SFRotation  rotation    0 0 1 0
+]
+
+{
+  Pose {
+    translation IS translation
+    rotation IS rotation
+    children [
+      Pose {
+        translation 0.2 3.30795e-09 0.22
+        rotation 1 0 0 0.2
+        children [
+          Shape {
+            appearance Plastic {
+              colorOverride 0.6 0.6 0.6
+            }
+            geometry Cylinder {
+              height 0.47
+              radius 0.01
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -0.12 3.30795e-09 0.22
+        rotation 1 0 0 0.2
+        children [
+          Shape {
+            appearance Plastic {
+              colorOverride 0.6 0.6 0.6
+            }
+            geometry Cylinder {
+              height 0.47
+              radius 0.01
+            }
+          }
+        ]
+      }
+      Pose {
+        translation 0.180684 -0.0687535 0.341004
+        rotation 0.9205746178983234 -0.39056673294247163 0 1.57
+        children [
+          Shape {
+            appearance Plastic {
+              colorOverride 0.6 0.6 0.6
+            }
+            geometry Cylinder {
+              height 0.1
+              radius 0.01
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -0.100684 -0.0687535 0.341004
+        rotation 0.9205745218788872 0.39056695926237545 0 1.57
+        children [
+          Shape {
+            appearance Plastic {
+              colorOverride 0.6 0.6 0.6
+            }
+            geometry Cylinder {
+              height 0.1
+              radius 0.01
+            }
+          }
+        ]
+      }
+      Pose {
+        translation 0.2 -0.388494 0.179587
+        rotation 1 0 0 -0.12
+        children [
+          Shape {
+            appearance Plastic {
+              colorOverride 0.6 0.6 0.6
+            }
+            geometry Cylinder {
+              height 0.35
+              radius 0.01
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -0.12 -0.388494 0.179587
+        rotation 1 0 0 -0.12
+        children [
+          Shape {
+            appearance Plastic {
+              colorOverride 0.6 0.6 0.6
+            }
+            geometry Cylinder {
+              height 0.35
+              radius 0.01
+            }
+          }
+        ]
+      }
+      Pose {
+        translation 0.04 -0.22 0.35
+        children [
+          Shape {
+            appearance Plastic {
+              colorOverride 0.86 0.81 0.65
+            }
+            geometry Box {
+              size 0.35 0.33 0.02
+            }
+          }
+        ]
+      }
+      Pose {
+        translation 0.04 -0.0174837 0.584904
+        rotation 1 0 0 1.3089996938995747
+        children [
+          Shape {
+            appearance Plastic {
+              colorOverride 0.86 0.81 0.65
+            }
+            geometry Box {
+              size 0.35 0.27 0.02
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

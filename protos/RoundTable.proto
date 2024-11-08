@@ -1,0 +1,87 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Plastic.proto"
+
+PROTO RoundTable [
+    field   SFVec3f     translation 0 0 0
+    field   SFRotation  rotation    0 0 1 0
+]
+
+{
+  Pose {
+    translation IS translation
+    rotation IS rotation
+    children [
+      Pose {
+        translation 0 0 0.5
+        children [
+          Shape {
+            appearance Plastic {
+              colorOverride 0.1 0.1 0.1
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.3
+            }
+          }
+        ]
+      }
+      Pose {
+        translation 0.2 0.2 0.25
+        children [
+          Shape {
+            appearance Plastic {
+              colorOverride 0.6 0.6 0.6
+            }
+            geometry Cylinder {
+              height 0.5
+              radius 0.007
+            }
+          }
+        ]
+      }
+      Pose {
+        translation 0.2 -0.2 0.25
+        children [
+          Shape {
+            appearance Plastic {
+              colorOverride 0.6 0.6 0.6
+            }
+            geometry Cylinder {
+              height 0.5
+              radius 0.007
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -0.2 -0.2 0.25
+        children [
+          Shape {
+            appearance Plastic {
+              colorOverride 0.6 0.6 0.6
+            }
+            geometry Cylinder {
+              height 0.5
+              radius 0.007
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -0.2 0.2 0.25
+        children [
+          Shape {
+            appearance Plastic {
+              colorOverride 0.6 0.6 0.6
+            }
+            geometry Cylinder {
+              height 0.5
+              radius 0.007
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
